@@ -1,4 +1,4 @@
-<h1 align="center">📦 Hướng Dẫn Sử Tạo Repository trên GitHub</h1>
+<h1 align="center">📦 Hướng Dẫn Tạo Repository trên GitHub</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status">
@@ -62,25 +62,25 @@ Link tải về và hướng dẫn cài đặt chi tiết [GitHub CLI](https://g
    ```
 > [!NOTE]
 > - Việc chỉnh sửa hoàn toàn có thể kết hợp bằng vscode GUI hoặc vscode terminal đều được. 
-> - Trong bài viết này, chúng ta sẽ thử dùng cli để tạo ra các nội dung ban đầu. Để update các nội dung cho file README, ta làm theo các bước ở [4.6](#46-đẩy-thay-đổi-lên-github).
-
+> - Trong bài viết này, chúng ta sẽ thử dùng cli để tạo ra các nội dung ban đầu. Nếu có thay đổi, làm từ bước [4.6. Đẩy thay đổi lên GitHub](#46-đẩy-thay-đổi-lên-github) để cập nhật nội dung mới.
 > - Ngôn ngữ Markdown sẽ được dùng để format nội dung file README.md.
 > - Bạn có thể xem nội dung đầy đủ file README.md này bằng file README.raw khi với ngôn ngữ Markdown khi chưa được github convert.
 
 ### 4.4 Sử dụng gh CLI để tạo repository mới trên GitHub
     ```bash
-   gh repo create tao-repo-tren-github --public
-   ```
+    gh repo create tao-repo-tren-github --public
+    ```
+
 ### 4.5 Thêm remote repository
     ```bash
-    git remote add origin https://github.com/<tên-user>/tao-repo-tren-github.git
+    git remote add origin https://github.com/<tên-user-github-của-bạn>/tao-repo-tren-github.git
     ```
 ### 4.6 Đẩy thay đổi lên GitHub
     ```bash
     git add .
-    git commit -m "Initial commit"
+    git commit -m 'Initial commit'
     git push -u origin main
-   ```
+    ```
 ### 4.7 Thêm mô tả và các chủ đề cho repository:
    ```bash
    gh repo edit --description "Hướng dẫn sử dụng GitHub CLI để tạo và quản lý repository trên GitHub"
@@ -89,6 +89,7 @@ Link tải về và hướng dẫn cài đặt chi tiết [GitHub CLI](https://g
 > [!NOTE]   
 > - Lệnh `edit --description`này mô tả (description) của repository. Mô tả này giúp người khác hiểu rõ hơn về mục đích và nội dung của repository
 > - Lệnh `edit --add-topic` gán các chủ đề cho repository. Các chủ đề này giúp phân loại và tạo ra các chủ đề liên quan cho repository của bạn trên GitHub, giúp người dùng dễ dàng tìm kiếm và khám phá các dự án có liên quan
+
 ## 5. Đóng Góp và Phát Triển
 
 Chúng tôi chào đón mọi đóng góp dưới dạng báo lỗi, đề xuất hoặc thảo luận trong repository.
