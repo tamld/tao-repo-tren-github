@@ -3,6 +3,12 @@
 <p align="center">
   <img src="https://img.shields.io/badge/status-active-brightgreen" alt="Status">
   <img src="https://img.shields.io/badge/license-MIT-blue" alt="License">
+  <img src="https://img.shields.io/github/downloads/tamld/tao-repo-tren-github/total.svg">
+</p>
+<p align="center">
+  <img src="https://img.shields.io/github/forks/tamld/tao-repo-tren-github.svg">
+  <img src="https://img.shields.io/github/stars/tamld/tao-repo-tren-github.svg">
+  <img src="https://img.shields.io/github/followers/tamld.svg?style=social&label=Follow&maxAge=2592000">
 </p>
 
 ## 1. Giới Thiệu
@@ -12,17 +18,42 @@ Bài viết này sẽ hướng dẫn bạn cách sử dụng GitHub CLI (gh CLI)
 - Tạo một repository mới trên GitHub
 - Đẩy mã nguồn từ máy tính lên GitHub
 - Sử dụng VSCode để tạo nội dung cho repository
+- Các bước thực hiện
 
+```mermaid
+graph TD
+    A[Cài đặt và Đăng nhập GitHub CLI]
+    A --> B[Trên Windows]
+    A --> C[Trên Linux hoặc macOS]
+    B --> D[gh auth login]
+    C --> D[gh auth login]
+    D --> E[Tạo thư mục mới chứa repo]
+    E --> F[Khởi tạo Git repository]
+    F --> G[Tạo nội dung file README.md]
+    G --> H[Sử dụng gh CLI để tạo repository mới trên GitHub]
+    H --> I[Thêm remote repository]
+    I --> J[Đẩy thay đổi lên GitHub]
+    J --> K[Thêm mô tả và các chủ đề cho repository]
+```
 ## 2. Mục Lục
 
-1. [Giới Thiệu](#1-giới-thiệu)
-2. [Mục Lục](#2-mục-lục)
-3. [Cài đặt và Đăng nhập GitHub CLI](#3-cài-đặt-và-đăng-nhập-github-cli)
-   - [3.1. Trên Windows](#31-trên-windows)
-   - [3.2. Trên Linux hoặc macOS](#32-trên-linux-hoặc-macos)
-4. [Tạo Repository và Đẩy Nội Dung Lên GitHub](#4-tạo-repository-và-đẩy-nội-dung-lên-github)
-5. [Đóng Góp và Phát Triển](#5-đóng-góp-và-phát-triển)
-6. [Giải Thích Markdown và Tổng Kết](#6-giải-thích-markdown-và-tổng-kết)
+- [1. Giới Thiệu](#1-giới-thiệu)
+- [2. Mục Lục](#2-mục-lục)
+- [3. Cài đặt và Đăng nhập GitHub CLI](#3-cài-đặt-và-đăng-nhập-github-cli)
+  - [3.1 Trên Windows](#31-trên-windows)
+  - [3.2 Trên Linux hoặc macOS](#32-trên-linux-hoặc-macos)
+- [4. Tạo Repository và Đẩy Nội Dung Lên GitHub](#4-tạo-repository-và-đẩy-nội-dung-lên-github)
+  - [4.1 Tạo thư mục mới chứa repo](#41-tạo-thư-mục-mới-chứa-repo)
+  - [4.2 Khởi tạo Git repository](#42-khởi-tạo-git-repository)
+  - [4.3 Tạo nội dung file `README.md`](#43-tạo-nội-dung-file-readmemd)
+  - [4.4 Sử dụng gh CLI để tạo repository mới trên GitHub](#44-sử-dụng-gh-cli-để-tạo-repository-mới-trên-github)
+  - [4.5 Thêm remote repository](#45-thêm-remote-repository)
+  - [4.6 Đẩy thay đổi lên GitHub](#46-đẩy-thay-đổi-lên-github)
+  - [4.7 Thêm mô tả và các chủ đề cho repository:](#47-thêm-mô-tả-và-các-chủ-đề-cho-repository)
+- [5. Đóng Góp và Phát Triển](#5-đóng-góp-và-phát-triển)
+- [6. Giải Thích Markdown và Tổng Kết](#6-giải-thích-markdown-và-tổng-kết)
+  - [Giải Thích Markdown](#giải-thích-markdown)
+  - [Tổng Kết](#tổng-kết)
 
 ## 3. Cài đặt và Đăng nhập GitHub CLI
 
@@ -67,20 +98,20 @@ Link tải về và hướng dẫn cài đặt chi tiết [GitHub CLI](https://g
 > - Bạn có thể xem nội dung đầy đủ file README.md này bằng file README.raw khi với ngôn ngữ Markdown khi chưa được github convert.
 
 ### 4.4 Sử dụng gh CLI để tạo repository mới trên GitHub
-    ```bash
-    gh repo create tao-repo-tren-github --public
-    ```
+   ```bash
+   gh repo create tao-repo-tren-github --public
+   ```
 
 ### 4.5 Thêm remote repository
-    ```bash
-    git remote add origin https://github.com/<tên-user-github-của-bạn>/tao-repo-tren-github.git
-    ```
+   ```bash
+   git remote add origin https://github.com/<tên-user-github-của-bạn>/tao-repo-tren-github.git
+   ```
 ### 4.6 Đẩy thay đổi lên GitHub
-    ```bash
-    git add .
-    git commit -m 'Initial commit'
-    git push -u origin main
-    ```
+   ```bash
+   git add .
+   git commit -m 'Initial commit'
+   git push -u origin main
+   ```
 ### 4.7 Thêm mô tả và các chủ đề cho repository:
    ```bash
    gh repo edit --description "Hướng dẫn sử dụng GitHub CLI để tạo và quản lý repository trên GitHub"
